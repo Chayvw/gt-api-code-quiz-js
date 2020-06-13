@@ -2,21 +2,40 @@ var timeEl = document.querySelector(".time");
 var startEl = document.getElementById("#start");
 var beginGame = document.getElementById("beginGame");
 var arrayOfQuestions = [{
-  question: "what is the color of the sky?",
-  answers: ["red", "yellow", "blue", "orange"],
+  question: "Who was the first person to score 100 points in a regulation NBA game?",
+  answers: ["Michael Jordan", "Wilt Chamberlain", "LeBron James", "Oscar Robertson"],
   correctAnswer: 2
 },
 {
-  question: "how many hours are in a day?",
-  answers: ["1", "2", "9", "24"],
-  correctAnswer: 3
-}]
+  question: "Who won the 2009 NBA Finals?",
+  answers: ["Boston Celtics", "Cleveland Cavaliers", "Los Angeles Lakers", "Orlando Magic"],
+  correctAnswer: 1
+},
+{
+  question: "What happens if the two teams' scores are tied at the end of regulation time?",
+  answers: ["The game is counted as a tie", "The game goes into overtime", "The two teams have a shootout", "The teams play rock, paper,scissors to decide who wins"],
+  correctAnswer: 2
+
+},
+{
+  question: "The ball-handler takes three steps without dribbling, what violation did he commit?",
+ answers: ["Carrying", "Double Dribble", "Traveling", "Goaltending"],
+correctAnswer: 1
+},
+
+];
+
 var currentQuestionIndex = 0
 var questionEl = document.getElementById("questionEl");
 
 
 
-
+// question: "Arrays in Javascript can be used to store___ ",
+// answers: ["numbers and strings", "other arrays", "booleans", "all of the above"],
+// correctAnswer: 3 
+// },
+// }
+// question: string value
 
 //var secondsLeft = 60;
 
@@ -55,17 +74,16 @@ function setTime() {
     }, 1000);
   });
 }
-
+// Function call
 setTime();
 function setFeatured() {
   var currentQuestion = arrayOfQuestions[currentQuestionIndex];
   console.log(currentQuestionIndex)
-  // Clear out the innerHTML to remove previous person.
 
-  // Create an image element.
+
+  // Create an text content element.
   questionEl.textContent = currentQuestion.question;
-  //imageEl.setAttribute("src", currentPerson.imageUrl);
-  //imageEl.setAttribute("id", "featured-image");
+
   // Create an h3 for the name.
   var answer1El = document.createElement("h3");
   answer1El.setAttribute("value", "0");
@@ -87,11 +105,6 @@ function setFeatured() {
   questionEl.append(answer4El);
 }
 
-// FUNCTION CALLS
-// setFeaturedImage();
-// setFeaturedName();
-
-
 // EVENT LISTENERS
 
 questionEl.addEventListener("click", function (event) {
@@ -110,31 +123,8 @@ questionEl.addEventListener("click", function (event) {
 
   }
   else {
-    alert ("Game Over")
+    alert("Game Over")
   }
 })
 
 
-//buttonRightEl.addEventListener("click", function () {
-  // console.log("You clicked the right button");
-  // 1. Increment the current index
-  // console.log(currentImageIndex);
-  //currentImageIndex++;
-  // console.log(currentImageIndex);
-  // 2. Call the setFeaturedImage function
-  //   setFeaturedImage();
-  //   setFeaturedName();
- // setFeatured();
-//});
-
-//buttonLeftEl.addEventListener("click", function () {
-  //currentImageIndex--;
-  //   setFeaturedImage();
-  //   setFeaturedName();
-  //setFeatured();
-//});
-// uestionEl.addEventListener("click", function (event) {
-  // uestionEl.addEventListener("click", function (event) {
-    // uestionEl.addEventListener("click", function (event) {
-    //   uestionEl.addEventListener("click", function (event) {
-    //     uestionEl.addEventListener("click", function (event) {
