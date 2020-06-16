@@ -5,7 +5,7 @@ Create index.html file and open in browswer
 
 
 ## Usage 
-![] assets/api.png
+![](assets/api.png)
 [Deployed Site] https://chayvw.github.io/gt-api-code-quiz-js/ 
 
 
