@@ -93,13 +93,13 @@ questionEl.addEventListener("click", function (event) {
   console.log(arrayOfQuestions[currentQuestionIndex].correctAnswer)
   if (event.target.attributes.value.value == (arrayOfQuestions[currentQuestionIndex].correctAnswer)) {
     console.log("You actually clicked the correct answer");
-    alert("You've actually clicked the correct answer")
+    // alert("You've actually clicked the correct answer")
 
   }
   else {
     secondsLeft = (secondsLeft - 10);
     console.log(secondsLeft);
-    alert("Sorry that is not the right answer")
+    // alert("Sorry that is not the right answer")
   }
   if (currentQuestionIndex < arrayOfQuestions.length - 1) {
     currentQuestionIndex++;
